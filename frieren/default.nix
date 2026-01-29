@@ -83,11 +83,13 @@
       spotify
       zotero
       obsidian
+      signal-desktop
 
       python3
       tldr
 
       git
+      gh
       lf
       libqalculate
       timewarrior
@@ -95,8 +97,6 @@
       binutils # e.g., strings
       file
       unzip
-
-      gh
 
       # KDE
       kdePackages.discover # Optional: Install if you use Flatpak or fwupd firmware update sevice
@@ -122,8 +122,15 @@
         init.defaultBranch = "main";
         pull.rebase = true;
         push.autoSetupRemote = true;
+        credential.helper = "gh";
       };
     };
+
+    programs.gh = {
+      enable = true;
+      gitCredentialHelper.enable = false;
+    };
+
 
 
     home.sessionVariables.EDITOR = "nvim";
