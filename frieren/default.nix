@@ -96,6 +96,8 @@
       file
       unzip
 
+      gh
+
       # KDE
       kdePackages.discover # Optional: Install if you use Flatpak or fwupd firmware update sevice
       kdePackages.kcalc # Calculator
